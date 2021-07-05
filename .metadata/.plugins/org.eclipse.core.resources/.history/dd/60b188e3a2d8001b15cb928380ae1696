@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class PowerSet {
+	public static void main(String[] args) {
+		int x = 100;
+		System.out.println(~x);
+	}
+	
+	public List<String> AllPossibleStrings(String s)
+    {
+        List<String>l = new ArrayList<>();
+        int n = s.length();
+        int pow = (int)Math.pow(2, n);
+        for(int i = 1 ;i < pow; i++) {
+            StringBuilder st = new StringBuilder();
+            for(int j = 0; j < n; j++) {
+                if((i & (1<<j)) != 0)
+                    st.append(s.charAt(j));
+            }   
+            l.add(st.toString());
+        }
+        Collections.sort(l);
+        return l;
+    }
+}

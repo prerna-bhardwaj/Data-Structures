@@ -1,0 +1,28 @@
+
+public class BasicOperations {
+	public static void main(String args[]) {
+		System.out.println(getBit(5, 2));
+		System.out.println(setBit(5, 2));
+		System.out.println(clearBit(5, 2));
+		System.out.println(updateBit(5, 1, 1));
+	}
+
+	private static char[] updateBit(int i, int j, int k) {
+		
+		return null;
+	}
+
+	private static char[] clearBit(int i, int j) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static char[] setBit(int i, int j) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static int getBit(int n, int k) {
+		return n&(1<<k);
+	}
+}
