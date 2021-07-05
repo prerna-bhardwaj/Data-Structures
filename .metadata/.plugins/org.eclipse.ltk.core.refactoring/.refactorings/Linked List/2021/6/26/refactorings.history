@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;NextGreatesElementInList&apos; to &apos;NextGreatestElementInList&apos;&#x0A;- Original project: &apos;Linked List&apos;&#x0A;- Original element: &apos;NextGreatesElementInList&apos;&#x0A;- Renamed element: &apos;NextGreatestElementInList&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NextGreatesElementInList&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{NextGreatesElementInList.java[NextGreatesElementInList" matchStrategy="1" name="NextGreatestElementInList" qualified="false" references="true" similarDeclarations="false" stamp="1624511439323" textual="false" version="1.0"/>
-</session>

@@ -1,8 +1,0 @@
-/*
- * Given a string s containing brackets "(" and ")", return the length of the 
- * longest subsequence of balanced brackets. 
- * NOTE : the characters in the subsequence do not have to be contiguous.
- */
-public class LongestBalancedSubsequence {
-
-}

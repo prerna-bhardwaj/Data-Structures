@@ -1,7 +1,0 @@
-
-public class PowerSet {
-	public static void main(String[] args) {
-		unsigned int x = 1;
-		System.out.println(~x);
-	}
-}
