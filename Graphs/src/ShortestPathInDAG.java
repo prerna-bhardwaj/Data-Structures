@@ -83,8 +83,6 @@ public class ShortestPathInDAG {
 	}
 
 	private void findShortestPath(int start) {
-//		for(int i = 0; i < V; i++)
-//			dist[i] = Integer.MAX_VALUE;
 		dist[start] = 0;
 		
 		// Process all the nodes from topOrder sequentially
