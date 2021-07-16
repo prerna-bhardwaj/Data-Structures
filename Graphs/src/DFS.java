@@ -1,3 +1,18 @@
+/*
+ * ADJACENCY LIST :
+ * For a directed graph, the sum of the sizes of the adjacency lists of all the nodes is E. 
+ * So, the time complexity in this case is O(V) + O(E) = O(V + E).
+ * For an undirected graph, each edge appears twice. Once in the adjacency list of either end of the edge. The time complexity for this case will be O(V) + O (2E) ~ O(V + E).
+ *	
+ * ADJACENCY MATRIX : 
+ * Time Complexity = O(V^2)
+ * 
+ * 4 types of edges in graph :
+ * 1. Forward edge - descendant is not part of dfs tree
+ * 2. Backward edge - ancestor is not part of dfs tree. Indicates cycle in graph
+ * 3. Tree edge - present in the dfs tree
+ * 4. Cross edge - no ancestor or descendant relationship
+ */
 import java.util.ArrayList;
 import java.util.Stack;
 
