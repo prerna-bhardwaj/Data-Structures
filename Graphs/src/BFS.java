@@ -31,6 +31,7 @@ public class BFS {
 			for(int ele : graph[node])
 				if(visited[ele] == false) {
 					q.add(ele);
+					// mark vertex as visited while pushing in the queue
 					visited[ele] = true;
 				}
 		}
