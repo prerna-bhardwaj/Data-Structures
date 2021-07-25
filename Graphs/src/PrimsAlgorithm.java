@@ -1,9 +1,12 @@
+/*
+ * GREEDY - Find MST
+ * Current TC - O(v^2) 
+ * With priority queue and adjancency list TC - O(ElogV) -- PENDING
+ */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.PriorityQueue;
-
-// GREEDY - Find MST
 
 public class PrimsAlgorithm {
 	static class Edge {
