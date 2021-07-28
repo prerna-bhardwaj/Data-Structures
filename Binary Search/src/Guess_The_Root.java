@@ -1,4 +1,6 @@
- public int solve(int n) {
+
+public class Guess_The_Root {
+	public static int solve(int n) {
         if(n < 2)   return n;
        long start = 0, end = n;
        int ans = n;
@@ -15,3 +17,10 @@
        }
        return (int)ans;
     }
+
+	public static void main(String[] args) {
+		System.out.println(solve(100));
+		System.out.println(solve(15));
+	}
+}
+
