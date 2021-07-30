@@ -1,0 +1,14 @@
+Condition for a tree to be a BST : 
+1. Every node has at most 2 children - left and right child
+2. Left child has to be strictly < parent node
+3. Right child has to be >= parent node
+4. Both left and right child themselves have to be BST.
+
+Deletion of node from binary tree : 
+Node to be deleted might have : 
+	1. 0 children i.e. is a leaf node
+		- directly delete it
+	2. 1 child - either left or right
+		- delete it and replace it by its resp child
+	3. 2 non-null children i.e. both left and right child
+		- grab the smallest value from the right subtree and make it the new root.
