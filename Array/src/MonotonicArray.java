@@ -1,6 +1,8 @@
 
 /*
  * Array is monotonic if it is entirely non-increasing / entirely non-decreasing.
+1 3 3 4 5 7 - inc
+
  */
 public class MonotonicArray {
 	

@@ -5,3 +5,6 @@ Q2. Find length of the largest region in Boolean Matrix
  	containing a 1 is called a filled cell. Two cells are said to be connected if they are adjacent to each
  	other horizontally, vertically, or diagonally. If one or more filled cells are also connected, they form 
  	a region. find the length of the largest region.
+ 	
+ 	
+Q3. Find the shortest path in a maze with obstacles. - use BFS - backtracking is very costly and time consuming.

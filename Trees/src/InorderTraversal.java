@@ -3,7 +3,8 @@ import java.util.Stack;
 
 public class InorderTraversal {
 	static ArrayList<Integer> ar = new ArrayList<>();
-    // O(n)
+    // O(n) time | O(n) space - req for array
+	// If we were just printing the values instead of adding it to the array, then SC = O(d)
 	static ArrayList<Integer> inorderRecursive(Node root) {
         if(root == null)    return ar;
         
