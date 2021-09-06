@@ -10,7 +10,6 @@ public class AllPathsSourceToTarget {
 	}
 
 	static void pathHelper(int[][] mat, LinkedList<Integer> path, int n, int curr) {
-
 		if(curr == (n-1)) {
 			path.add(curr);
 			res.add(new ArrayList<Integer>(path));
