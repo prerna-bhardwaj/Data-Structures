@@ -7,4 +7,8 @@ Java provides a method for comparing two Array List. The ArrayList. equals() is 
 
 There are built-in intersection facilities, which provide O(n+m) time complexity in the average case and O(n×m) time complexity in the worst case.
 - In Python it's intersection operator, in Java - retainAll() function.
-set1.retainAll(set2) => equivalent to intersection(set1, set2)
+set1.retainAll(set2) => equivalent to intersection(set1, set2) 
+
+
+- Array of Strings are sorted in lexicographic order. Create custom comparator for sorting by length.
+
