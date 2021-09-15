@@ -12,3 +12,9 @@ set1.retainAll(set2) => equivalent to intersection(set1, set2)
 
 - Array of Strings are sorted in lexicographic order. Create custom comparator for sorting by length.
 
+- Add custom comparator in priority queue for ordering elements in descending/anything other than the default ordering i.e. increasing order.
+
+- To check is a number is perfect square or not -
+	double root = Math.sqrt(num);
+	if(Math.floor(root) - root == 0)  -> is perfect square
+	else 							  -> not a perfect square 
