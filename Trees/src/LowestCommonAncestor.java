@@ -24,7 +24,8 @@ public class LowestCommonAncestor {
 	}
 
 	/*
-	 * Below function assumes that both nodes are present in the tree
+	 * Below function assumes that both nodes are present in the tree. 
+	 * Done for BST
 	 */
 	private static Node findLCA(Node root, int n1, int n2) {
 		if(root == null)	return null;
@@ -35,4 +36,23 @@ public class LowestCommonAncestor {
 			return findLCA(root.right, n1, n2);
 		return root;
 	}
+
+	// Done for Binary Tree
+	// U can also store paths to both nodes from root.
+	// OR 
+	// Store parent-child in hashmap till both nodes are added.
+	// Then add all ancestors of p to a set
+	// Now process all ancestors of q to see if there is a match in the set.
+	// If yes, u have found the LCA 
+	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if(root == null)
+            return null;
+        if(root == p || root == q)
+            return root;
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        if(left != null && right != null)
+            return root;
+        return (left == null) ? right : left;
+    }
 }

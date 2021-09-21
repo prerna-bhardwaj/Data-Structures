@@ -50,3 +50,16 @@ public int ternarySearch(int n) {
     }
     return -1;
 } 
+
+- Next.previous smaller element - increasing stack
+next smaller element - L To R
+prev smaller element - R to L
+
+
+- Next.previous larger element - decreasing stack
+next larger element - L To R
+prev larger element - R to L
+
+-- To create clone of array of arraylist - use .clone() method
+
+- For "shortest path" problem, BFS can make our life easier.
