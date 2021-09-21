@@ -18,3 +18,35 @@ set1.retainAll(set2) => equivalent to intersection(set1, set2)
 	double root = Math.sqrt(num);
 	if(Math.floor(root) - root == 0)  -> is perfect square
 	else 							  -> not a perfect square 
+
+- Bijection - mapping has to be one to one onto. 
+- Either use 2 hashmaps for saving values from a->b and b->a.
+- OR use 1 hashmap and 1 set. hashmap contains a->b mapping. Whereas set will hold all values from b that have been mapped to some value in a.
+
+-> Ternary Search Algorithm
+In Binary Search, we choose the middle element as the pivot in splitting. 
+In Ternary Search, we choose two pivots (say m1 and m2) such that the given range is divided into three equal parts. If the required number num is less than m1 then we apply ternary search on the left segment of m1. If num lies between m1 and m2, we apply ternary search between m1 and m2. Otherwise we will search in the segment right to m2.
+
+public int ternarySearch(int n) {
+    int low = 1;
+    int high = n;
+    while (low <= high) {
+        int mid1 = low + (high - low) / 3;
+        int mid2 = high - (high - low) / 3;
+        int res1 = guess(mid1);
+        int res2 = guess(mid2);
+        if (res1 == 0)
+            return mid1;
+        if (res2 == 0)
+            return mid2;
+        else if (res1 < 0)
+            high = mid1 - 1;
+        else if (res2 > 0)
+            low = mid2 + 1;
+        else {
+            low = mid1 + 1;
+            high = mid2 - 1;
+        }
+    }
+    return -1;
+} 

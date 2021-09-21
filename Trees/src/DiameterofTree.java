@@ -20,7 +20,7 @@ public class DiameterofTree {
 		return ht;
 	}
 	
-	// TC - O(n)
+	// TC - O(n) | O(n) space
 	public static int diameterEfficient(Node root) {
 		if(root == null)	return 0;
 		int sum = 0;
@@ -45,12 +45,31 @@ public class DiameterofTree {
 		return 1 + Math.max(height(root.left), height(root.right));
 	}
 	
-	
+
+	// O(n) time | O(1) space
+	// Diameter = left path length + right path length
+	static int max = 0;
+    public static  int diameterOfBinaryTree(Node root) {
+        max = 0;
+        solve(root);
+        return max;
+    }
+    
+    public static  int solve(Node root){
+        if(root == null)
+            return 0;
+        int left = solve(root.left);
+        int right = solve(root.right);
+        max = Math.max(max, left + right);
+        return 1 + Math.max(left, right);
+    }
+
 	public static void main(String args[]) {
 		
 		Node root = Node.createTree();
 		System.out.println("Diameter : " + diameter(root));	
 		saveHeight(root);
 		System.out.println("Diameter Efficient : " + diameterEfficient(root));	
+		System.out.println("Diameter Optimal  : " + diameterOfBinaryTree(root));	
 	}
 }
