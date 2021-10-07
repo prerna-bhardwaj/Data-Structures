@@ -63,3 +63,10 @@ prev larger element - R to L
 -- To create clone of array of arraylist - use .clone() method
 
 - For "shortest path" problem, BFS can make our life easier.
+
+
+- NOTE : To get the rightmost set bit : 
+int rightMostSignificantBit = xor & -xor;       // here xor & -xor == xor & (~xor+1)
+e.g. : 6 & -6 = 2 (0000..0010) where 6 = 000000..00110 
+
+- To split a string over '.' - split(".") doesn't work. Do split("\\.") instead.
