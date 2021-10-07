@@ -70,3 +70,6 @@ int rightMostSignificantBit = xor & -xor;       // here xor & -xor == xor & (~xo
 e.g. : 6 & -6 = 2 (0000..0010) where 6 = 000000..00110 
 
 - To split a string over '.' - split(".") doesn't work. Do split("\\.") instead.
+
+ - If elements of grid/matrix/array/string are not to be used several times, then alter the position of the element in the grid 
+    itself. Helps in reducing the space complexity.
