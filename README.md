@@ -23,7 +23,7 @@ set1.retainAll(set2) => equivalent to intersection(set1, set2)
 - Either use 2 hashmaps for saving values from a->b and b->a.
 - OR use 1 hashmap and 1 set. hashmap contains a->b mapping. Whereas set will hold all values from b that have been mapped to some value in a.
 
--> Ternary Search Algorithm
+### Ternary Search Algorithm
 In Binary Search, we choose the middle element as the pivot in splitting. 
 In Ternary Search, we choose two pivots (say m1 and m2) such that the given range is divided into three equal parts. If the required number num is less than m1 then we apply ternary search on the left segment of m1. If num lies between m1 and m2, we apply ternary search between m1 and m2. Otherwise we will search in the segment right to m2.
 
@@ -73,3 +73,15 @@ e.g. : 6 & -6 = 2 (0000..0010) where 6 = 000000..00110
 
  - If elements of grid/matrix/array/string are not to be used several times, then alter the position of the element in the grid 
     itself. Helps in reducing the space complexity.
+
+### MINIMUM INCREMENT DECREMENT OPERATIONS TO MAKE ARRAY ELEMENT EQUAL
+ - Concept
+For calculating minimum number of operations to equalize an array, we need to make sure that all the elements are incremented to a value, so that they become equal in the least number of increment/decrement operations.For this, we should select a number which is, basically, nearest to all the elements in the array.
+
+This element will be the middle element of a sorted array.All the elements to the left of this element, will be incremented to its value and all the elements to its right will be decremented to its value.
+
+- Algorithm
+Step 1:Sort the array.
+Step 2:Find the median of the array.If the array is of odd length, only one median is obtained.If the array is of even length, we obtain 2 medians.
+Step 3:Now, start traversing the array, and add the absolute difference of the median and arr[i] to the sum.For even length arrays, repeat this step for both the medians.
+Step 4:After reaching the end of the array,we return the minimum sum.
