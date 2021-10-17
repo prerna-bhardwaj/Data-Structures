@@ -41,7 +41,7 @@ public class DeleteNodeWithGreaterValue {
 		// Find the next node to point recursively
 		Node nextNode = deleteNodes(head.next);
 		// If value of next node is greater than curr i.e. head node, then delete current node
-		// Thus we directly return current node, so head automatically gets eliminated form list
+		// Thus we directly return current node, so head automatically gets eliminated from the list
 		if(nextNode.data > head.data)
 			return nextNode;
 		

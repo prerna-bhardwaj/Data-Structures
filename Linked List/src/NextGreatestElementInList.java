@@ -40,6 +40,10 @@ public class NextGreatestElementInList {
         printList(res);
 	}
 
+9 1 6 2 11 4
+-1 9 9 6
+9 6
+
 	private static Node nestGreaterElement(Node head) {
 		if(head == null)	return head;
 		

@@ -47,7 +47,7 @@ public class RemoveDuplicatesFromUnsortedList {
 		while(ptr1 != null && ptr1.next != null) {
 			ptr2 = ptr1;
 			/*
-			 *  ptr2 always has some value mainlt bcz :
+			 *  ptr2 always has some value mainly bcz :
 			 *  1. ptr1 has value - checked above
 			 *  2. we always only update next ptr of ptr2 when match is found
 			 */
