@@ -85,3 +85,6 @@ Step 1:Sort the array.
 Step 2:Find the median of the array.If the array is of odd length, only one median is obtained.If the array is of even length, we obtain 2 medians.
 Step 3:Now, start traversing the array, and add the absolute difference of the median and arr[i] to the sum.For even length arrays, repeat this step for both the medians.
 Step 4:After reaching the end of the array,we return the minimum sum.
+
+
+Validate Binary Tree : https://leetcode.com/problems/validate-binary-tree-nodes/discuss/1420058/JAVA-Solution-using-Topological-Sorting
