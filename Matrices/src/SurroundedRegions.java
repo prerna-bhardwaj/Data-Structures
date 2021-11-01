@@ -22,6 +22,7 @@ class SurroundedRegions {
     public static void solve(char[][] grid) {
         Queue<Cell>q = new LinkedList<>();
         int m = grid.length, n = grid[0].length;
+        // Add all Os from the boundary
         for(int i = 0; i < n; i++) {
             if(grid[0][i] == 'O')
                 q.add(new Cell(0, i));
@@ -34,6 +35,7 @@ class SurroundedRegions {
             if(grid[i][n-1] == 'O')
                 q.add(new Cell(i, n-1));
         }
+        // Now perform bfs on all those cells
         while(!q.isEmpty()) {
             Cell c = q.poll();
             grid[c.x][c.y] = 'Y';
@@ -51,6 +53,7 @@ class SurroundedRegions {
             if(c.y < n-1 && grid[c.x][c.y+1] == 'O')
                 q.add(new Cell(c.x, c.y+1));                
         }
+        // The remaining Os are the ones that are completely surrounded by Xs and aren't reachable from the boundary.
         for(int i = 0; i < m; i++) {
             for(int j = 0; j < n; j++) {
                 if(grid[i][j] == 'Y')
