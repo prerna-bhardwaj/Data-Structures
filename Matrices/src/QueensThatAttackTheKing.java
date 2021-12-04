@@ -9,15 +9,19 @@ import java.util.*;
 
 class QueensThatAttackTheKing {
 
+	// O(1) time | O(1) space
 	public static List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {
         List<List<Integer>>ans = new ArrayList();
         int dirX[] = {1, 1, 0, -1, -1, -1, 0, 1};
         int dirY[] = {0, 1, 1, 1, 0, -1, -1, -1};
         int board[][] = new int[8][8];
+     	// Mark the queen positions on the board
         for(int i = 0; i < queens.length; i++) {
             board[queens[i][0]][queens[i][1]] = 1;
         }
+        // Check all 8 directions for the king
         for(int i = 0; i < 8; i++) {
+        	// Find the nearest queen in each direction
             int x = king[0], y = king[1];
             while(x >= 0 && y >= 0 && x < 8 && y < 8) {
                 if(board[x][y] == 1) {
